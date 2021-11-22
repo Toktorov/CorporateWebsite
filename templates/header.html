@@ -1,0 +1,112 @@
+<!-- <div class="preloader bg-red">
+    <div class="preloader-wrapper">
+        <div class="preloader-grid">
+            <div class="preloader-grid-item preloader-grid-item-1"></div>
+            <div class="preloader-grid-item preloader-grid-item-2"></div>
+            <div class="preloader-grid-item preloader-grid-item-3"></div>
+            <div class="preloader-grid-item preloader-grid-item-4"></div>
+            <div class="preloader-grid-item preloader-grid-item-5"></div>
+            <div class="preloader-grid-item preloader-grid-item-6"></div>
+            <div class="preloader-grid-item preloader-grid-item-7"></div>
+            <div class="preloader-grid-item preloader-grid-item-8"></div>
+            <div class="preloader-grid-item preloader-grid-item-9"></div>
+        </div>
+    </div>
+</div> -->
+
+<div class="fixed-top">
+    <div class="navbar-area navbar-area-three">
+        <div class="mobile-nav">
+            <a href="{% url 'home' %}" class="mobile-brand"> 
+                <img src="{{setting.logo.url}}" style="width: 70px !important" alt="logo" class="logo">  
+            </a>
+            <div class="navbar-option">
+                <div class="navbar-option-item navbar-option-dots dropdown">
+                    <button type="button" id="dot" aria-haspopup="true" aria-expanded="false"> <i class="flaticon-menu-1"></i> </button>
+                    <ul class="dropdown-menu navbar-dots-dropdown">
+                        <li class="dropdown-item">
+                            <div class="navbar-option-item navbar-option-language navbar-option-language-flat dropdown language-option">
+                                <button class="dropdown-toggle" type="button" id="language3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="flaticon-worldwide"></i> <span class="lang-name"></span> </button>
+                                <div class="dropdown-menu language-dropdown-menu" aria-labelledby="language3">
+                                    <a class="dropdown-item" href="#">English </a>
+                                    <a class="dropdown-item" href="#">Русский </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown-item">
+                            <div class="navbar-option-item navbar-option-sidebar"> <span><i class="flaticon-menu"></i></span> </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-option-item navbar-option-language navbar-option-language-flat dropdown mobile-hide language-option">
+                    <button class="dropdown-toggle" type="button" id="language1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="flaticon-worldwide"></i> <span class="lang-name"></span> </button>
+                    <div class="dropdown-menu language-dropdown-menu" aria-labelledby="language1">
+                        <a class="dropdown-item" href="#">English </a>
+                        <a class="dropdown-item" href="#">Русский </a>
+                    </div>
+                </div>
+                <div class="navbar-option-item navbar-option-search dropdown">
+                    <button type="button" id="search" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="flaticon-search"></i> </button>
+                    <div class="dropdown-menu" aria-labelledby="search">
+                        <form>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"> <i class="flaticon-search"></i> </div>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Search result"> </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="navbar-option-item navbar-option-sidebar mobile-hide"> <span><i class="flaticon-menu"></i></span> </div>
+            </div>
+        </div>
+        <div class="main-nav">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <a href="{% url 'home' %}" class="mobile-brand"> 
+                        <img src="{{setting.logo.url}}" style="width: 70px !important" alt="logo" class="logo">  
+                    </a>
+                    <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"> <a href="{% url 'home' %}" class="nav-link active">Главная</a></li>
+                            <li class="nav-item"> <a href="{% url 'portfolio' %}" class="nav-link">Портфолио</a></li>
+                            <li class="nav-item"> <a href="{% url 'service' %}" class="nav-link">Услуги</a></li>
+                            <li class="nav-item"> <a href="{% url 'about' %}" class="nav-link">О нас</a></li>
+                            <li class="nav-item"> <a href="{% url 'contact' %}" class="nav-link">Контакты</a> </li>
+                        </ul>
+                    </div>
+                    <div class="navbar-option">
+                        <div class="navbar-option-item navbar-option-search">
+                            <form>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"> <i class="flaticon-search"></i> </div>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Search result"> </div>
+                            </form>
+                        </div>
+                        <div class="navbar-option-item navbar-option-sidebar"> <span><i class="flaticon-menu"></i></span> </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<header class="header-page-bg overlay-shape">
+    <div class="header-bottom-shape"></div>
+    <div class="container">
+        <div class="header-page-content"> <small class="line-shape-bg color-white">{{setting.title}}</small>
+            <h1 class="color-white"> 
+                breadcrumb
+            </h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'home' %}">Главная</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        breadcrumb
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</header>

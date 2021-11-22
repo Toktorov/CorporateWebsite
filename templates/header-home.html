@@ -1,0 +1,130 @@
+{% load static %}
+
+<!-- Preloader START -->
+<!-- <div class="preloader bg-red">
+    <div class="preloader-wrapper">
+        <div class="preloader-grid">
+            <div class="preloader-grid-item preloader-grid-item-1"></div>
+            <div class="preloader-grid-item preloader-grid-item-2"></div>
+            <div class="preloader-grid-item preloader-grid-item-3"></div>
+            <div class="preloader-grid-item preloader-grid-item-4"></div>
+            <div class="preloader-grid-item preloader-grid-item-5"></div>
+            <div class="preloader-grid-item preloader-grid-item-6"></div>
+            <div class="preloader-grid-item preloader-grid-item-7"></div>
+            <div class="preloader-grid-item preloader-grid-item-8"></div>
+            <div class="preloader-grid-item preloader-grid-item-9"></div>
+        </div>
+    </div>
+</div> -->
+<!-- Preloader END -->
+
+<div class="topbar">
+    <div class="topbar-inner">
+        <div class="container-fluid">
+            <div class="topbar-grid">
+                <div class="topbar-item">
+                    <ul class="social-list">
+                        <li class="facebook-bg"><a href="#"><i class="flaticon-facebook-1"></i></a></li>
+                        <li class="twitter-bg"><a href="#"><i class="flaticon-twitter"></i></a></li>
+                        <li class="instagram-bg"><a href="#"><i class="flaticon-instagram"></i></a></li>
+                        <li class="twitter-bg"><a href="#"><i class="bx bxl-telegram"></i></a></li>
+                        <li class="youtube-bg"><a href="#"><i class="bx bxl-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="topbar-item topbar-right">
+                    <div class="topbar-right-grid">
+                        <div class="topbar-right-item">
+                            <div class="topbar-info">
+                                <div class="topbar-info-list"> <img src="{% static 'assets/images/chat-icon.png' %}" alt="icon">
+                                    <div class="topbar-info-text">
+                                        <h3><a href="tel:{{setting.phone}}">{{setting.phone}}</a></h3>
+                                        <p>Онлайн 24/7</p>
+                                    </div>
+                                </div>
+                                <div class="topbar-info-list"> <img src="{% static 'assets/images/clock-icon.png' %}" alt="icon">
+                                    <div class="topbar-info-text">
+                                        <h3>{{setting.time_work}}</h3>
+                                        <p>{{setting.day_work}}</p>
+                                    </div>
+                                </div>
+                                <div class="topbar-info-list"> <img src="{% static 'assets/images/email-icon.png' %}" alt="icon">
+                                    <div class="topbar-info-text">
+                                        <h3><a href="mailto:{{setting.email}}"><span class="__cf_email__">{{setting.email}}</span></a></h3>
+                                        <p>Контакты</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="topbar-language dropdown language-option">
+                                <button class="dropdown-toggle" type="button" id="language2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="flaticon-worldwide"></i> <span class="lang-name"></span> </button>
+                                <div class="dropdown-menu language-dropdown-menu" aria-labelledby="language2">
+                                    <a class="dropdown-item" href="#">English </a>
+                                    <a class="dropdown-item" href="#">Русский </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="navbar-area navbar-area-two">
+    <div class="mobile-nav">
+        <a href="{% url 'home' %}" class="mobile-brand"> 
+            <img src="{{setting.logo.url}}" style="width: 70px !important" alt="logo" class="logo">  
+        </a>
+        <div class="navbar-option">
+            <div class="navbar-option-item navbar-option-dots dropdown">
+                <button type="button" id="dot" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="flaticon-menu-1"></i> </button>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                        <div class="navbar-option-item navbar-option-sidebar"> <span><i class="flaticon-menu"></i></span> </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-option-item navbar-option-search dropdown">
+                <button type="button" id="search" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="flaticon-search"></i> </button>
+                <div class="dropdown-menu" aria-labelledby="search">
+                    <form>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"> <i class="flaticon-search"></i> </div>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Search result"> </div>
+                    </form>
+                </div>
+            </div>
+            <div class="navbar-option-item navbar-option-sidebar mobile-hide"> <span><i class="flaticon-menu"></i></span> </div>
+        </div>
+    </div>
+    <div class="main-nav">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <a class="navbar-brand" href="index.html"> 
+                    <img src="{{setting.logo.url}}" style="width: 70px !important" alt="logo" class="logo"> 
+                </a>
+                <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"> <a href="{% url 'home' %}" class="nav-link active">Главная</a></li>
+                        <li class="nav-item"> <a href="{% url 'portfolio' %}" class="nav-link">Портфолио</a></li>
+                        <li class="nav-item"> <a href="{% url 'service' %}" class="nav-link">Услуги</a></li>
+                        <li class="nav-item"> <a href="{% url 'about' %}" class="nav-link">О нас</a></li>
+                        <li class="nav-item"> <a href="{% url 'contact' %}" class="nav-link">Контакты</a> </li>
+                    </ul>
+                </div>
+                <div class="navbar-option">
+                    <div class="navbar-option-item navbar-option-search">
+                        <form>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"> <i class="flaticon-search"></i> </div>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Search result"> </div>
+                        </form>
+                    </div>
+                    <div class="navbar-option-item navbar-option-sidebar"> <span><i class="flaticon-menu"></i></span> </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>

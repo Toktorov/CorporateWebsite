@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block header %}
+	{% include 'header.html' %}
+{% endblock header %}
+
+
+{% block content %}
+
+<section class="contact-us-section pt-100 pb-70">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-6 pb-30">
+                <div class="contact-us-item contact-us-image text-center"> <img src="{% static 'assets/images/about-image-three.png' %}" alt="image"> </div>
+            </div>
+            <div class="col-12 col-lg-6 pb-30">
+                <div class="contact-us-item max-585 mx-auto mx-lg-0">
+                    <form id="contactForm" class="contact-form">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group custom-form-group mb-20">
+                                    <div class="input-group">
+                                        <label for="name">Name*</label>
+                                        <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" /> </div>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group custom-form-group mb-20">
+                                    <div class="input-group">
+                                        <label for="phone_number">Phone*</label>
+                                        <input type="text" name="phone_number" id="phone_number" required data-error="Please enter your phone number" class="form-control" /> </div>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group custom-form-group mb-20">
+                                    <div class="input-group">
+                                        <label for="email">Email Address*</label>
+                                        <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" /> </div>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group custom-form-group mb-20">
+                                    <div class="input-group">
+                                        <label for="msg_subject">Subject*</label>
+                                        <input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Please enter your subject" /> </div>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12">
+                                <div class="form-group custom-form-group mb-20">
+                                    <div class="input-group">
+                                        <label for="message">Message</label>
+                                        <textarea name="message" class="form-control" id="message" rows="8"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="input-checkbox mb-20">
+                                    <input type="checkbox" id="contact1">
+                                    <label for="contact1">Accept <a href="terms-conditions.html">Terms & Conditions</a> and <a href="privacy-policy">Privacy Policy</a></label>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <button class="btn" type="submit"> Send Message </button>
+                                <div id="msgSubmit"></div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="contact-grid-section pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4 pb-30">
+                <div class="contact-grid-box">
+                    <div class="contact-grid-thumb"> <img src="{% static 'assets/images/contact-grid-1.jpg' %}" alt="contact"> </div>
+                    <div class="contact-grid-content">
+                        <h3>Наше местечко</h3>
+                        <div class="contact-grid-para"><i class="flaticon-network"></i>{{setting.address}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 pb-30">
+                <div class="contact-grid-box">
+                    <div class="contact-grid-thumb"> <img src="{% static 'assets/images/contact-grid-2.jpg' %}" alt="contact"> </div>
+                    <div class="contact-grid-content">
+                        <h3>Позвонить и узнать</h3>
+                        <div class="contact-grid-para"> <i class="flaticon-phone-call"></i>
+                            <p> <a href="tel:{{setting.phone}}">{{setting.phone}}</a>
+                                <br> <a href="tel:{{setting.phone2}}">{{setting.phone2}}</a> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 pb-30 offset-md-3 offset-lg-0">
+                <div class="contact-grid-box">
+                    <div class="contact-grid-thumb"> 
+                        <img src="{% static 'assets/images/contact-grid-3.jpg' %}" alt="contact"> 
+                    </div>
+                    <div class="contact-grid-content">
+                        <h3>Написать на E-mail</h3>
+                        <div class="contact-grid-para"> <i class="flaticon-email"></i>
+                            <p> 
+                                <a href="mailto:{{setting.email}}">
+                                    <span class="__cf_email__">{{setting.email}}</span>
+                                </a>
+                                <br> 
+                                <a href="mailto:{{setting.email2}}">
+                                    <span class="__cf_email__">{{setting.email2}}</span>
+                                </a> 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	
+{% endblock content %}
